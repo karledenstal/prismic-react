@@ -1,16 +1,6 @@
-import Prismic from 'prismic-javascript';
+export const apiEndpoint = 'https://k2-personal.cdn.prismic.io/api/v2';
+export const accessToken =
+  'MC5YbEdBN1JFQUFDTUFpYk8t.Inhx77-977-977-9RCxWVSnvv73vv70qVEFeRQofRu-_ve-_ve-_ve-_ve-_ve-_vRLvv73vv71577-9';
 
-export const apiEndpoint = process.env.PRISMIC_API_URL | '';
-export const accessToken = process.env.PRISMIC_ACCESS_TOKEN | '';
-
-// Client method to query documents from the Prismic repo
-export const Client = (req = null) => Prismic.client(apiEndpoint, createClientOptions(req, accessToken));
-
-const createClientOptions = (req = null, prismicAccessToken = null) => {
-  const reqOption = req ? { req } : {};
-  const accessTokenOption = prismicAccessToken ? { accessToken: prismicAccessToken } : {};
-  return {
-    ...reqOption,
-    ...accessTokenOption,
-  };
-};
+export const linkResolver = () => '/';
+export const hrefResolver = () => '/';

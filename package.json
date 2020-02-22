@@ -1,0 +1,38 @@
+{
+  "name": "prismic-react",
+  "version": "1.0.0",
+  "description": "Personal site with prismic and react",
+  "main": "index.js",
+  "repository": "https://github.com/karledenstal/prismic-react.git",
+  "author": "Karl Edenstål <karl.edenstal@rhyme.se>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "9.2.2",
+    "prismic-javascript": "^2.1.5",
+    "prismic-reactjs": "^1.2.0",
+    "prop-types": "^15.7.2",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "styled-components": "^5.0.1"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.10.7",
+    "husky": ">=4",
+    "lint-staged": ">=10",
+    "prettier": "^1.19.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write"
+  }
+}

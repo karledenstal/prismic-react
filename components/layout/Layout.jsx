@@ -23,7 +23,7 @@ export const Layout = ({ title, desc, image, children }) => {
           {image && <meta property='og:image' content={image} />}
           <link rel='stylesheet' href='https://use.typekit.net/tdf5exd.css' />
         </Head>
-        <Header path={router.pathname} />
+        <Header path={router.asPath} />
         <LayoutInnerWrapper>{children}</LayoutInnerWrapper>
       </LayoutWrapper>
     </>
@@ -32,8 +32,12 @@ export const Layout = ({ title, desc, image, children }) => {
 
 const LayoutWrapper = styled.div`
   padding: 0;
-  width: 1000px;
+  width: 75%;
   margin: 0 auto;
+
+  @media screen and (max-width: 780px) {
+    width: 100%;
+  }
 `;
 
 const LayoutInnerWrapper = styled.div`

@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export const Ingress = ({ content }) => <IngressWrapper>{content}</IngressWrapper>;
+export const Ingress = ({ content, topMargin }) => (
+  <IngressWrapper topMargin={topMargin}>{content}</IngressWrapper>
+);
 
 const IngressWrapper = styled.p`
   margin: 0;
@@ -10,6 +12,14 @@ const IngressWrapper = styled.p`
   text-align: center;
   width: 75%;
   margin: 0 auto;
-  margin-top: 4rem;
+  margin-top: ${props => (props.topMargin ? '4rem' : '0')};
   line-height: 160%;
+
+  @media screen and (max-width: 780px) {
+    width: 100%;
+  }
 `;
+
+Ingress.defaultProps = {
+  topMargin: true,
+};

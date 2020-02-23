@@ -24,10 +24,6 @@ export const Header = ({ path }) => {
     pathsWithNav.set(router.query.uid, unslugify(router.query.uid));
   }
 
-  console.log(router);
-
-  let pathParts = router.pathname.split('/');
-
   const Crumb = () => {
     let parts = path.split('/');
     const place = parts[parts.length - 1];

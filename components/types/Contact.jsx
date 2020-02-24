@@ -1,5 +1,5 @@
 import React from 'react';
-import { Ingress, CoolLink } from '../text';
+import { Ingress } from '../text';
 import styled from 'styled-components';
 
 export const Contact = ({ ingress, url }) => (

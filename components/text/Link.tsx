@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 
-export const CoolLink = ({ to, name }) => (
+export const CoolLink: FC<{ to: string; name: string; }> = ({ to, name }) => (
   <LinkWrapper>
     <Link href={to}>
       <StyledLink>{name}</StyledLink>

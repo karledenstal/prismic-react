@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
 
-export const Ingress = ({ content, topMargin }) => (
+export const Ingress: FC<{ content: string; topMargin?: boolean }> = ({ content, topMargin = false }) => (
   <IngressWrapper topMargin={topMargin}>{content}</IngressWrapper>
 );
 

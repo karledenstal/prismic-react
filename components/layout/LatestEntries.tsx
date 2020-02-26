@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled, { css } from 'styled-components';
 import { RichText } from 'prismic-reactjs';
 import Link from 'next/link';
-import { TagType } from '../layout';
+import { TagType } from '.';
 import moment from 'moment';
 
-export const LatestEntries = ({ entries }) => {
+export const LatestEntries: FC<{ entries: Array<any> }> = ({ entries }) => {
   return (
     <LatestWrapper>
       {entries &&

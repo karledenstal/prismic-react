@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled, { css } from 'styled-components';
 import { useRouter } from 'next/router';
 
@@ -17,7 +17,7 @@ export const TagType = {
   },
 };
 
-export const Tags = ({ items }) => {
+export const Tags: FC<{ items: Array<any> }> = ({ items }) => {
   const router = useRouter();
 
   return (

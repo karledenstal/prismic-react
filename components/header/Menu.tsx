@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
 
-export const Menu = ({ isOpen, handler }) => {
+export const Menu: FC<{ isOpen: boolean; handler: (boolean: boolean) => void }> = ({ isOpen, handler }) => {
   if (isOpen) {
     return (
       <MenuWrapper isOpen={isOpen}>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, FC } from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
@@ -6,11 +6,11 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { Menu } from './Menu';
 
-export const Header = ({ path }) => {
+export const Header: FC<{ path: string; }> = ({ path }) => {
   const router = useRouter();
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
-  const unslugify = slug => {
+  const unslugify = (slug) => {
     let parts = slug.split('-');
     parts = parts.join(' ');
     return parts.charAt(0).toUpperCase() + parts.slice(1);
@@ -37,7 +37,7 @@ export const Header = ({ path }) => {
     );
   };
 
-  const bc = (part, partIndex, parts) => {
+  const bc = (part: string, partIndex: number, parts: Array<any>) => {
     const path = ['', ...parts.slice(0, partIndex + 1)].join('/');
 
     return (

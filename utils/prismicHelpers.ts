@@ -1,6 +1,5 @@
 import Prismic from 'prismic-javascript';
-import Link from 'next/link';
-import { apiEndpoint, accessToken, linkResolver, hrefResolver } from '../prismic-configuration';
+import { apiEndpoint, accessToken } from '../prismic-configuration';
 
 export const Client = (req = null) => Prismic.client(apiEndpoint, createClientOptions(req, accessToken));
 

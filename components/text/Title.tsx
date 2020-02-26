@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
 
-export const Title = ({ content, left }) => <TitleWrapper left={left}>{content}</TitleWrapper>;
+interface TitleProps {
+  content: string;
+  left?: boolean;
+}
+
+export const Title: FC<TitleProps> = ({ content, left = false }) => <TitleWrapper left={left}>{content}</TitleWrapper>;
 
 const TitleWrapper = styled.h2`
   margin: 0;

@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { Ingress } from '../text';
 import styled from 'styled-components';
 
-export const Contact = ({ ingress, url }) => (
+export const Contact: FC<{ ingress: string; url: string; }> = ({ ingress, url }) => (
   <ContactWrapper>
     <Ingress topMargin={false} content={ingress} />
     <MailLink href={url} target='_blank'>Let's have a chat!</MailLink>

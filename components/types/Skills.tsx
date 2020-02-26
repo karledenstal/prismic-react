@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled, { css } from 'styled-components';
 import { Title } from '../text';
 import { RichText } from 'prismic-reactjs';
@@ -38,7 +38,7 @@ const SkillTypes = {
   },
 };
 
-export const Skills = ({ title, items }) => (
+export const Skills: FC<{ title: string; items: Array<any> }> = ({ title, items }) => (
   <SkillsWrapper>
     <Title left={true} content={title} />
     <SkillItems>

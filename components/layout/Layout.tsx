@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { GlobalStyle } from '../../globals/styles';
 import Head from 'next/head';
 import styled from 'styled-components';
 import { Header } from '../header/Header';
 import { useRouter } from 'next/router';
 
-export const Layout = ({ title, desc, image, children }) => {
+interface LayoutInterface {
+  title: string;
+  desc: string;
+  image?: string;
+}
+
+export const Layout: FC<LayoutInterface> = ({ title, desc, image, children }) => {
   const router = useRouter();
 
   return (

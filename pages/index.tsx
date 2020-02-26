@@ -26,7 +26,7 @@ const Home = ({ doc, entries }) => {
 
 Home.getInitialProps = async ({ req }) => {
   try {
-    const home = await Client(req).getSingle('homepage');
+    const home = await Client(req).getSingle('homepage', {});
     const entries = await Client(req).query(Prismic.Predicates.at('document.type', 'journal_entry'), {
       pageSize: 2,
     });

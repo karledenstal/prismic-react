@@ -27,10 +27,13 @@
     "styled-components": "^5.0.1"
   },
   "devDependencies": {
+    "@types/node": "^13.7.6",
+    "@types/react": "^16.9.23",
     "babel-plugin-styled-components": "^1.10.7",
     "husky": ">=4",
     "lint-staged": ">=10",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "typescript": "^3.8.2"
   },
   "husky": {
     "hooks": {

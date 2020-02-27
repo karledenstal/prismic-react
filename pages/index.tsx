@@ -5,12 +5,12 @@ import { Client } from '../utils/prismicHelpers';
 import { RichText } from 'prismic-reactjs';
 import styled from 'styled-components';
 import Prismic from 'prismic-javascript';
+import { NextPage } from 'next';
+import { Document } from '../entities/prismic';
 
-const Home = ({ doc, entries }) => {
+const Home: NextPage<{ doc: Document; entries: Array<{}> }> = ({ doc, entries }) => {
   const p = doc.data;
   const e = entries;
-
-  console.log(e);
 
   return (
     <Layout title={p.homepage_meta_title} desc={p.homepage_meta_description}>

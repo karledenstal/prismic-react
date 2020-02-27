@@ -4,8 +4,9 @@ import { Client } from '../../utils/prismicHelpers';
 import { Title, Ingress } from '../../components/text';
 import { RichText } from 'prismic-reactjs';
 import { NextPage } from 'next';
+import { Document } from '../../entities/prismic';
 
-const Entry: NextPage<{ doc: any }> = ({ doc }) => {
+const Entry: NextPage<{ doc: Document }> = ({ doc }) => {
   const e = doc.data;
   console.log(e);
   return (
@@ -17,7 +18,6 @@ const Entry: NextPage<{ doc: any }> = ({ doc }) => {
 };
 
 Entry.getInitialProps = async ({ req, query }) => {
-  console.log(query);
   const uid: any = query.uid;
   const document = await Client(req).getByUID('journal_entry', uid, {});
 

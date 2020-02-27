@@ -5,13 +5,12 @@ import { Title, Ingress } from '../../components/text';
 import { RichText } from 'prismic-reactjs';
 import Prismic from 'prismic-javascript';
 import { NextPage } from 'next';
+import { Document } from '../../entities/prismic';
 
-const Journal: NextPage<{ doc: any; tags: Array<any>; entries: Array<any> }> = ({ doc, tags, entries }) => {
+const Journal: NextPage<{ doc: Document; tags: Array<{}>; entries: Array<{}> }> = ({ doc, tags, entries }) => {
   const j = doc.data;
   const t = tags;
   const e = entries;
-
-  console.log(e);
 
   return (
     <Layout title={j.page_meta_title} desc={j.page_meta_description}>

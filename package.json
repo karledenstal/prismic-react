@@ -17,7 +17,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "@fortawesome/react-fontawesome": "^0.1.8",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "next": "9.2.2",
     "prismic-javascript": "^2.1.5",
     "prismic-reactjs": "^1.2.0",
